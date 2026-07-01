@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DropLocal - Share files locally and offline over Wi-Fi without internet. Cute, ultra-fast, and secure wireless transfer for Windows, macOS, Linux, Android, Steam Deck, and Smart TVs.">
+  <meta name="keywords" content="DropLocal, file transfer, local share, offline share, local wifi transfer, android file share, steam deck flatpak, tv transfer">
+  <meta name="author" content="DropLocal Team">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://droplocal.github.io/">
+  <meta property="og:title" content="DropLocal - Local & Offline File Sharing, Simplified">
+  <meta property="og:description" content="Transfer files over local Wi-Fi, 100% offline. High-speed transfers with zero internet data usage and zero size limits.">
+  <meta property="og:image" content="assets/hero_illustration.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://droplocal.github.io/">
+  <meta property="twitter:title" content="DropLocal - Local & Offline File Sharing, Simplified">
+  <meta property="twitter:description" content="Transfer files over local Wi-Fi, 100% offline. High-speed transfers with zero internet data usage and zero size limits.">
+  <meta property="twitter:image" content="assets/hero_illustration.png">
+
+  <!-- International SEO: Language Alternatives -->
+  <link rel="alternate" hreflang="x-default" href="?lang=en">
+  <link rel="alternate" hreflang="en" href="?lang=en">
+  <link rel="alternate" hreflang="fr" href="?lang=fr">
+  <link rel="alternate" hreflang="es" href="?lang=es">
+  <link rel="alternate" hreflang="ar" href="?lang=ar">
+
+  <title>DropLocal - Local & Offline File Sharing, Simplified</title>
+
+  <!-- Google Fonts: Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons for modern aesthetic -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <p><i class="fa-solid fa-star text-yellow animate-pulse"></i> <span data-i18n="announcement">New: Version 2.0 with Smart TV & Steam Deck support is out!</span></p>
+  </div>
+
+  <!-- Header & Navigation -->
+  <header class="navbar-header">
+    <div class="container nav-container">
+      <a href="#" class="logo-link" id="logo-nav">
+        <img src="assets/logo_final-removebg-preview.png" alt="DropLocal Logo" class="app-logo">
+        <span class="app-name">DropLocal</span>
+      </a>
+
+      <nav class="desktop-menu">
+        <a href="#features" data-i18n="nav-features">Features</a>
+        <a href="#how-it-works" data-i18n="nav-how">How it Works</a>
+        <a href="#download" data-i18n="nav-download">Download</a>
+        <a href="#faq" data-i18n="nav-faq">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Dropdown -->
+        <div class="language-dropdown">
+          <button class="dropdown-trigger" id="lang-select-btn">
+            <i class="fa-solid fa-globe"></i>
+            <span id="current-lang-label">English</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <ul class="dropdown-menu" id="lang-options">
+            <li data-lang="en">English</li>
+            <li data-lang="fr">Français</li>
+            <li data-lang="es">Español</li>
+            <li data-lang="ar" class="rtl-option">العربية</li>
+          </ul>
+        </div>
+        <!-- Primary Download Button in Nav -->
+        <a href="#download" class="btn btn-secondary nav-cta-btn" data-i18n="nav-cta">Download App</a>
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-menu-overlay" id="mobile-menu">
+    <button class="mobile-close-btn" id="menu-close"><i class="fa-solid fa-xmark"></i></button>
+    <nav class="mobile-nav-links">
+      <a href="#features" data-i18n="nav-features">Features</a>
+      <a href="#how-it-works" data-i18n="nav-how">How it Works</a>
+      <a href="#download" data-i18n="nav-download">Download</a>
+      <a href="#faq" data-i18n="nav-faq">FAQ</a>
+      <a href="#download" class="btn btn-primary" data-i18n="nav-cta">Download App</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <span class="badge" data-i18n="hero-badge">⚡ 100% Offline Sharing</span>
+          <h1 data-i18n="hero-title">Local wireless file sharing, simplified.</h1>
+          <p class="hero-subtitle" data-i18n="hero-subtitle">Transfer files over local Wi-Fi, without Internet. Direct Wi-Fi or Hotspot transfer with zero size limits.</p>
+          
+          <!-- Direct Dynamic Download Recommendation -->
+          <div class="hero-cta-wrapper">
+            <div id="detected-os-card" class="detected-card hidden">
+              <p class="detected-tag" data-i18n="detected-platform">Detected your platform</p>
+              <a href="#" id="detected-os-btn" class="btn btn-primary btn-hero">
+                <i class="fa-brands fa-windows" id="detected-os-icon"></i>
+                <span><span data-i18n="download-for">Download for</span> <strong id="detected-os-name">Windows</strong></span>
+              </a>
+            </div>
+            <a href="#download" class="btn btn-outlined scroll-cta" data-i18n="view-all-platforms">View All Platforms</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-num">0%</span>
+              <span class="stat-lbl" data-i18n="stat-data">Data Usage</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">∞</span>
+              <span class="stat-lbl" data-i18n="stat-limits">Size Limits</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-num">100%</span>
+              <span class="stat-lbl" data-i18n="stat-secure">Offline & Secure</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-graphic">
+          <div class="blob-bg animate-blob"></div>
+          <img src="assets/hero_illustration.png" alt="DropLocal Sharing Mockup" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 data-i18n="features-title">Why use DropLocal?</h2>
+          <p data-i18n="features-subtitle">Ditch the cables and the cloud. Here is how we make offline sharing a breeze.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card animate-hover">
+            <div class="icon-wrapper color-pink">
+              <i class="fa-solid fa-wifi"></i>
+            </div>
+            <h3 data-i18n="feature-1-title">No Internet, No Limits</h3>
+            <p data-i18n="feature-1-desc">Direct Wi-Fi or Hotspot transfer. No internet, no data usage, and no size limits. Perfect for rural areas, flights, or when saving mobile data.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card animate-hover">
+            <div class="icon-wrapper color-blue">
+              <i class="fa-solid fa-qrcode"></i>
+            </div>
+            <h3 data-i18n="feature-2-title">Scan & Send</h3>
+            <p data-i18n="feature-2-desc">Instant connection via QR Code. Simply scan the receiver's screen, select files of any type, and transfer instantly without configuration.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card animate-hover">
+            <div class="icon-wrapper color-green">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 data-i18n="feature-3-title">Privacy & Security</h3>
+            <p data-i18n="feature-3-desc">100% offline-first. Your files never pass through external servers, meaning your confidential data stays completely private and secure on your local network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive How It Works Section -->
+    <section id="how-it-works" class="guide-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 data-i18n="guide-title">How to Connect?</h2>
+          <p data-i18n="guide-subtitle">DropLocal works locally by establishing a secure direct link. Choose your configuration below.</p>
+        </div>
+
+        <!-- Mode Toggle Switch -->
+        <div class="toggle-container">
+          <button class="toggle-btn active" id="toggle-wifi">
+            <i class="fa-solid fa-house-signal"></i>
+            <span data-i18n="scenarioBTitle">Option B: Same Wi-Fi</span>
+          </button>
+          <button class="toggle-btn" id="toggle-hotspot">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <span data-i18n="scenarioATitle">Option A: Hotspot</span>
+          </button>
+        </div>
+
+        <!-- Connection Cards Wrapper -->
+        <div class="guide-cards-wrapper">
+          <!-- Same Wi-Fi Content -->
+          <div class="guide-content active" id="content-wifi">
+            <div class="guide-details">
+              <h3 data-i18n="scenarioBTitle">Option B: Same Wi-Fi</h3>
+              <p class="guide-desc" data-i18n="scenarioBDesc">Connect both devices to the same Wi-Fi network. Recommended for homes, offices, and cafes.</p>
+              
+              <ul class="step-list">
+                <li>
+                  <span class="step-number">1</span>
+                  <p><strong data-i18n="guide-wifi-step1-title">Join Network</strong>: <span data-i18n="guide-wifi-step1-desc">Check that your sending and receiving devices are connected to the same Wi-Fi SSID.</span></p>
+                </li>
+                <li>
+                  <span class="step-number">2</span>
+                  <p><strong data-i18n="guide-wifi-step2-title">Open App</strong>: <span data-i18n="guide-wifi-step2-desc">Start DropLocal on both devices. Click 'Receive' on the target device to generate its IP & QR code.</span></p>
+                </li>
+                <li>
+                  <span class="step-number">3</span>
+                  <p><strong data-i18n="guide-wifi-step3-title">Scan and Send</strong>: <span data-i18n="guide-wifi-step3-desc">Click 'Send' on the sender device, scan the receiver's QR Code (or type their IP manually), and watch it transfer!</span></p>
+                </li>
+              </ul>
+            </div>
+            <div class="guide-visual">
+              <div class="mock-device-ui">
+                <div class="mock-screen">
+                  <div class="mock-header">
+                    <span class="mock-dot"></span>
+                    <span class="mock-title" data-i18n="receive">Receive</span>
+                  </div>
+                  <div class="mock-body text-center">
+                    <p class="mock-status-txt" data-i18n="waitingForFile">Waiting for file...</p>
+                    <div class="mock-qr-code">
+                      <i class="fa-solid fa-qrcode fa-5x"></i>
+                    </div>
+                    <div class="mock-info-badge">
+                      <small data-i18n="connectionIpAddress">Connection IP Address</small>
+                      <strong>192.168.1.142</strong>
+                    </div>
+                    <span class="mock-footer-txt" data-i18n="stayOnScreen">Keep this screen open to receive.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hotspot Content -->
+          <div class="guide-content" id="content-hotspot">
+            <div class="guide-details">
+              <h3 data-i18n="scenarioATitle">Option A: Hotspot</h3>
+              <p class="guide-desc" data-i18n="scenarioADesc">Turn on Hotspot on one device and connect the second to it. Ideal when outdoors, on a train, or when no local Wi-Fi router is available.</p>
+              
+              <ul class="step-list">
+                <li>
+                  <span class="step-number">1</span>
+                  <p><strong data-i18n="guide-hotspot-step1-title">Enable Hotspot</strong>: <span data-i18n="guide-hotspot-step1-desc">Turn on mobile hotspot on one device (it doesn't need internet/data enabled).</span></p>
+                </li>
+                <li>
+                  <span class="step-number">2</span>
+                  <p><strong data-i18n="guide-hotspot-step2-title">Connect Second Device</strong>: <span data-i18n="guide-hotspot-step2-desc">Join the newly created hotspot network from the settings of your second device.</span></p>
+                </li>
+                <li>
+                  <span class="step-number">3</span>
+                  <p><strong data-i18n="guide-hotspot-step3-title">Transfer Directly</strong>: <span data-i18n="guide-hotspot-step3-desc">Open DropLocal on both devices, scan the QR code to pair, and start sharing at local speeds of up to 50MB/s!</span></p>
+                </li>
+              </ul>
+            </div>
+            <div class="guide-visual">
+              <div class="mock-device-ui">
+                <div class="mock-screen">
+                  <div class="mock-header">
+                    <span class="mock-dot"></span>
+                    <span class="mock-title" data-i18n="send">Send</span>
+                  </div>
+                  <div class="mock-body">
+                    <div class="mock-file-selector">
+                      <i class="fa-regular fa-file-zipper"></i>
+                      <div>
+                        <strong>holiday_photos.zip</strong>
+                        <small>1.2 GB - <span data-i18n="allFormatsNoLimit">All formats accepted</span></small>
+                      </div>
+                    </div>
+                    <div class="mock-input-field">
+                      <small data-i18n="receiverIpAddress">Recipient IP</small>
+                      <div class="mock-fake-input">192.168.43.1</div>
+                    </div>
+                    <button class="mock-action-btn" data-i18n="sendFileButton">Send file</button>
+                    <div class="mock-progress-bar">
+                      <div class="mock-progress-fill" style="width: 72%;"></div>
+                    </div>
+                    <span class="mock-percent">72% <span data-i18n="sendingProgress">Sending...</span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 data-i18n="download-title">Download DropLocal</h2>
+          <p data-i18n="download-subtitle">Available on all your devices. Install DropLocal today and experience frictionless sharing.</p>
+        </div>
+
+        <!-- Responsive Platform Grid -->
+        <div class="platforms-grid">
+          <!-- Windows Card -->
+          <div class="platform-card" id="card-windows">
+            <div class="platform-icon"><i class="fa-brands fa-windows"></i></div>
+            <h3>Windows</h3>
+            <p class="platform-format">.exe / .msi Installer</p>
+            <p class="platform-req">Windows 10 / 11 (64-bit)</p>
+            <a href="downloads/DropLocal_Windows.zip" class="btn btn-primary btn-download" download="DropLocal_Windows.zip">
+              <i class="fa-brands fa-windows"></i>
+              <span data-i18n="dl-btn-win">Download .zip</span>
+            </a>
+          </div>
+
+          <!-- macOS Card -->
+          <div class="platform-card" id="card-macos">
+            <div class="platform-icon"><i class="fa-brands fa-apple"></i></div>
+            <h3>macOS</h3>
+            <p class="platform-format">.dmg Disk Image</p>
+            <p class="platform-req">Intel & Apple Silicon (macOS 11+)</p>
+            <a href="downloads/DropLocal.dmg" class="btn btn-primary btn-download" download="DropLocal.dmg">
+              <i class="fa-solid fa-arrow-down-to-bracket"></i>
+              <span data-i18n="dl-btn-mac">Download .dmg</span>
+            </a>
+          </div>
+
+          <!-- Linux Card -->
+          <div class="platform-card" id="card-linux">
+            <div class="platform-icon"><i class="fa-brands fa-linux"></i></div>
+            <h3>Linux</h3>
+            <p class="platform-format">.deb / .rpm / Flatpak</p>
+            <p class="platform-req">Ubuntu, Fedora, Arch & SteamOS</p>
+            <div class="multi-btn-row">
+              <a href="downloads/droplocal.deb" class="btn btn-outlined btn-sm" download="droplocal.deb">DEB</a>
+              <a href="downloads/droplocal.rpm" class="btn btn-outlined btn-sm" download="droplocal.rpm">RPM</a>
+              <a href="https://flathub.org/apps/details/io.github.droplocal" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Flatpak</a>
+            </div>
+          </div>
+
+          <!-- Android Card -->
+          <div class="platform-card" id="card-android">
+            <div class="platform-icon"><i class="fa-brands fa-android"></i></div>
+            <h3>Android</h3>
+            <p class="platform-format">Google Play / Standalone .apk</p>
+            <p class="platform-req">Android 6.0 (Marshmallow) or higher</p>
+            <div class="multi-btn-row">
+              <a href="downloads/droplocal.apk" class="btn btn-outlined btn-sm" download>Direct APK</a>
+              <a href="https://play.google.com/store/apps/details?id=io.github.droplocal" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Google Play</a>
+            </div>
+          </div>
+
+          <!-- Steam Deck Card -->
+          <div class="platform-card" id="card-steamdeck">
+            <div class="platform-icon"><i class="fa-solid fa-gamepad"></i></div>
+            <h3>Steam Deck</h3>
+            <p class="platform-format">Optimized Gaming Mode Version</p>
+            <p class="platform-req">SteamOS (Flatpak integration)</p>
+            <a href="https://flathub.org/apps/details/io.github.droplocal" class="btn btn-outlined btn-download" target="_blank" rel="noopener">
+              <i class="fa-solid fa-circle-down"></i>
+              <span data-i18n="dl-btn-deck">Install via Discover</span>
+            </a>
+          </div>
+
+          <!-- Smart TV Card -->
+          <div class="platform-card" id="card-smarttv">
+            <div class="platform-icon"><i class="fa-solid fa-tv"></i></div>
+            <h3>Smart TV</h3>
+            <p class="platform-format">Android TV .apk / Tizen App</p>
+            <p class="platform-req">Android TV, Chromecast, Fire TV</p>
+            <a href="downloads/droplocal-tv.apk" class="btn btn-outlined btn-download" download="droplocal-tv.apk">
+              <i class="fa-solid fa-arrow-down-to-bracket"></i>
+              <span data-i18n="dl-btn-tv">Download TV APK</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 data-i18n="faq-title">Frequently Asked Questions</h2>
+          <p data-i18n="faq-subtitle">Everything you need to know about DropLocal transfers.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- Item 1 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq-q1">Does DropLocal use my mobile cellular data?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq-a1">No, DropLocal does not consume any internet or mobile cellular data. It connects directly over local Wi-Fi router or peer-to-peer Hotspot network. You can even use it with your SIM card removed or on airplane mode!</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq-q2">Is there any limit to the file size I can send?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq-a2">Absolutely zero limits! Since transfers happen locally directly between devices, we do not upload files to servers. You can send a 10MB photo, a 5GB video, or a 50GB file backup without any restrictions.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq-q3">How secure are my files with DropLocal?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq-a3">DropLocal operates 100% offline-first. Your files are transferred directly between devices on your local network. Your data never leaves your physical environment, protecting it from hackers, cloud leaks, or third-party monitoring.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq-q4">How fast are the file transfers?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq-a4">DropLocal reaches maximum hardware speed of your local Wi-Fi card (typically between 10MB/s and 70MB/s). It is up to 100 times faster than Bluetooth sharing and doesn't depend on internet speed bottleneck.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="faq-q5">Does it support Tizen or Fire TV?</span>
+              <i class="fa-solid fa-plus faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p data-i18n="faq-a5">Yes! You can install DropLocal on Android TV, Chromecast, Amazon Fire TV stick via sideloading the TV APK. Tizen TV version is available via developer mode in the Tizen store, making it easy to throw files to your living room screen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer-area">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <div class="logo-link">
+          <img src="assets/logo_final-removebg-preview.png" alt="DropLocal Logo" class="app-logo">
+          <span class="app-name">DropLocal</span>
+        </div>
+        <p class="footer-description" data-i18n="footer-desc">Frictionless, local wireless file sharing over Wi-Fi networks. 100% free and open-source.</p>
+      </div>
+
+      <div class="footer-links">
+        <div class="links-column">
+          <h4 data-i18n="footer-col-nav">Navigation</h4>
+          <a href="#features" data-i18n="nav-features">Features</a>
+          <a href="#how-it-works" data-i18n="nav-how">How it Works</a>
+          <a href="#download" data-i18n="nav-download">Download</a>
+        </div>
+        <div class="links-column">
+          <h4 data-i18n="footer-col-legal">Legal & Info</h4>
+          <a href="#" data-i18n="footer-privacy">Privacy Policy</a>
+          <a href="#" data-i18n="footer-terms">Terms of Service</a>
+          <a href="https://github.com/droplocal/droplocal" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Code</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="container bottom-container">
+        <p class="copyright">&copy; 2026 DropLocal. <span data-i18n="footer-rights">All rights reserved.</span></p>
+        <p class="badge-row">
+          <span class="footer-badge"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="secureDataFooter">100% offline and secure</span></span>
+          <span class="footer-badge"><i class="fa-solid fa-wifi"></i> <span data-i18n="localWirelessFooter">Local wireless transfer</span></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
