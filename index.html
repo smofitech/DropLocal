@@ -320,7 +320,7 @@
             <h3>Windows</h3>
             <p class="platform-format">.exe / .msi Installer</p>
             <p class="platform-req">Windows 10 / 11 (64-bit)</p>
-            <a href="downloads/DropLocal_Windows.zip" class="btn btn-primary btn-download" download="DropLocal_Windows.zip">
+            <a href="release/DropLocal_Windows.zip" class="btn btn-primary btn-download" download="DropLocal_Windows.zip">
               <i class="fa-brands fa-windows"></i>
               <span data-i18n="dl-btn-win">Download .zip</span>
             </a>
@@ -333,8 +333,8 @@
             <p class="platform-format">.dmg Installer / .zip Archive</p>
             <p class="platform-req">Intel & Apple Silicon (macOS 11+)</p>
             <div class="multi-btn-row">
-              <a href="downloads/DropLocal.dmg" class="btn btn-outlined btn-sm" download="DropLocal.dmg">DMG</a>
-              <a href="downloads/DropLocal_MacOS.zip" class="btn btn-primary btn-sm" download="DropLocal_MacOS.zip">
+              <a href="#" class="btn btn-outlined btn-sm disabled" onclick="return false;">DMG</a>
+              <a href="release/DropLocal_MacOS.zip" class="btn btn-primary btn-sm" download="DropLocal_MacOS.zip">
                 <i class="fa-regular fa-file-zipper"></i> ZIP
               </a>
             </div>
@@ -347,12 +347,12 @@
             <p class="platform-format">.deb / .rpm / .zip / Flatpak</p>
             <p class="platform-req">Ubuntu, Fedora, Arch & SteamOS</p>
             <div class="multi-btn-row" style="flex-wrap: wrap;">
-              <a href="downloads/droplocal.deb" class="btn btn-outlined btn-sm" download="droplocal.deb" style="flex: 1 1 45%;">DEB</a>
-              <a href="downloads/droplocal.rpm" class="btn btn-outlined btn-sm" download="droplocal.rpm" style="flex: 1 1 45%;">RPM</a>
-              <a href="downloads/DropLocal_Linux.zip" class="btn btn-primary btn-sm" download="DropLocal_Linux.zip" style="flex: 1 1 45%;">
+              <a href="#" class="btn btn-outlined btn-sm disabled" onclick="return false;" style="flex: 1 1 45%;">DEB</a>
+              <a href="#" class="btn btn-outlined btn-sm disabled" onclick="return false;" style="flex: 1 1 45%;">RPM</a>
+              <a href="release/DropLocal_Linux.zip" class="btn btn-primary btn-sm" download="DropLocal_Linux.zip" style="flex: 1 1 45%;">
                 <i class="fa-regular fa-file-zipper"></i> ZIP
               </a>
-              <a href="https://flathub.org/apps/details/io.github.droplocal" class="btn btn-outlined btn-sm" target="_blank" rel="noopener" style="flex: 1 1 45%;">Flatpak</a>
+              <a href="#" class="btn btn-outlined btn-sm disabled" onclick="return false;" style="flex: 1 1 45%;">Flatpak</a>
             </div>
           </div>
 
@@ -360,11 +360,11 @@
           <div class="platform-card" id="card-android">
             <div class="platform-icon"><i class="fa-brands fa-android"></i></div>
             <h3>Android</h3>
-            <p class="platform-format">Google Play Store</p>
+            <p class="platform-format">APK Installer</p>
             <p class="platform-req">Android 6.0 (Marshmallow) or higher</p>
-            <a href="https://play.google.com/store/apps/details?id=io.github.droplocal" class="btn btn-primary btn-download" target="_blank" rel="noopener">
-              <i class="fa-brands fa-google-play"></i>
-              <span>Google Play</span>
+            <a href="release/DropLocal_Android.apk" class="btn btn-primary btn-download" download="DropLocal_Android.apk">
+              <i class="fa-brands fa-android"></i>
+              <span data-i18n="dl-btn-android">Download APK</span>
             </a>
           </div>
 
@@ -374,7 +374,7 @@
             <h3>Steam Deck</h3>
             <p class="platform-format">Optimized Gaming Mode Version</p>
             <p class="platform-req">SteamOS (Flatpak integration)</p>
-            <a href="https://flathub.org/apps/details/io.github.droplocal" class="btn btn-outlined btn-download" target="_blank" rel="noopener">
+            <a href="#" class="btn btn-outlined btn-download disabled" onclick="return false;">
               <i class="fa-solid fa-circle-down"></i>
               <span data-i18n="dl-btn-deck">Install via Discover</span>
             </a>
@@ -386,7 +386,7 @@
             <h3>Smart TV</h3>
             <p class="platform-format">Android TV .apk / Tizen App</p>
             <p class="platform-req">Android TV, Chromecast, Fire TV</p>
-            <a href="downloads/droplocal-tv.apk" class="btn btn-outlined btn-download" download="droplocal-tv.apk">
+            <a href="#" class="btn btn-outlined btn-download disabled" onclick="return false;">
               <i class="fa-solid fa-arrow-down-to-bracket"></i>
               <span data-i18n="dl-btn-tv">Download TV APK</span>
             </a>
@@ -483,7 +483,7 @@
         </div>
         <div class="links-column">
           <h4 data-i18n="footer-col-legal">Legal & Info</h4>
-          <a href="#" data-i18n="footer-privacy">Privacy Policy</a>
+          <a href="privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
           <a href="#" data-i18n="footer-terms">Terms of Service</a>
           <a href="https://github.com/droplocal/droplocal" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub Code</a>
         </div>

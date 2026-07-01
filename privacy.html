@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DropLocal Privacy Policy - Learn how DropLocal protects your data with 100% offline file sharing.">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy - DropLocal</title>
+
+  <!-- Google Fonts: Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Reuse main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Privacy Policy Page Specific Styles */
+    .privacy-hero {
+      background: linear-gradient(135deg, var(--primary-light) 0%, var(--background) 50%, var(--accent-light) 100%);
+      padding: 6rem 0 3rem;
+      text-align: center;
+    }
+
+    .privacy-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .privacy-hero .privacy-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
+
+    .privacy-hero .last-updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      padding: 0.5rem 1.25rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    .privacy-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .privacy-section {
+      background: var(--card);
+      border: var(--border-width) solid var(--border);
+      border-radius: 24px;
+      padding: 2rem 2.25rem;
+      margin-bottom: 1.5rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .privacy-section:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .privacy-section .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .privacy-section .section-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .privacy-section .section-icon.pink { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+    .privacy-section .section-icon.blue { background: linear-gradient(135deg, var(--accent), #97b4d0); }
+    .privacy-section .section-icon.green { background: linear-gradient(135deg, var(--success), #8dd3b8); }
+    .privacy-section .section-icon.peach { background: linear-gradient(135deg, var(--warning), #f0c4a0); }
+    .privacy-section .section-icon.coral { background: linear-gradient(135deg, var(--error), #e07a82); }
+
+    .privacy-section h2 {
+      font-size: 1.3rem;
+      margin: 0;
+    }
+
+    .privacy-section p,
+    .privacy-section li {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .privacy-section ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.75rem;
+    }
+
+    .privacy-section ul li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.55rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+
+    .privacy-highlight {
+      background: linear-gradient(135deg, var(--primary-light), var(--accent-light));
+      border: var(--border-width) solid var(--border);
+      border-radius: 20px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .privacy-highlight i {
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .privacy-highlight p {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 16px;
+      border: var(--border-width) solid var(--border);
+      background: var(--card);
+      transition: all var(--transition-fast);
+      margin-bottom: 2rem;
+      display: inline-flex;
+    }
+
+    .back-link:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      transform: translateX(-4px);
+    }
+
+    .contact-box {
+      background: var(--card);
+      border: var(--border-width-thick) solid var(--primary);
+      border-radius: 24px;
+      padding: 2rem 2.25rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .contact-box h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-box a {
+      color: var(--primary-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Language switcher for privacy page */
+    .privacy-lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .privacy-lang-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 16px;
+      border: var(--border-width) solid var(--border);
+      background: var(--card);
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .privacy-lang-btn:hover,
+    .privacy-lang-btn.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* RTL support */
+    html[dir="rtl"] .privacy-section ul li {
+      padding-left: 0;
+      padding-right: 1.75rem;
+    }
+
+    html[dir="rtl"] .privacy-section ul li::before {
+      left: auto;
+      right: 0;
+    }
+
+    html[dir="rtl"] .back-link:hover {
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="navbar-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="logo-nav">
+        <img src="assets/logo_final-removebg-preview.png" alt="DropLocal Logo" class="app-logo">
+        <span class="app-name">DropLocal</span>
+      </a>
+      <nav class="desktop-menu">
+        <a href="index.html#features" data-i18n-privacy="nav-features">Features</a>
+        <a href="index.html#how-it-works" data-i18n-privacy="nav-how">How it Works</a>
+        <a href="index.html#download" data-i18n-privacy="nav-download">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Privacy Hero -->
+  <section class="privacy-hero">
+    <div class="container">
+      <h1><i class="fa-solid fa-shield-halved" style="color: var(--primary-dark);"></i> <span data-i18n-privacy="title">Privacy Policy</span></h1>
+      <p class="privacy-subtitle" data-i18n-privacy="subtitle">DropLocal is designed with your privacy at its core. Here is exactly how we handle your data.</p>
+      <div class="last-updated">
+        <i class="fa-regular fa-calendar"></i>
+        <span data-i18n-privacy="lastUpdated">Last updated: July 1, 2026</span>
+      </div>
+
+      <!-- Language Switcher -->
+      <div class="privacy-lang-switcher">
+        <button class="privacy-lang-btn active" data-lang="en">English</button>
+        <button class="privacy-lang-btn" data-lang="fr">Français</button>
+        <button class="privacy-lang-btn" data-lang="es">Español</button>
+        <button class="privacy-lang-btn" data-lang="ar">العربية</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy Content -->
+  <div class="privacy-content">
+
+    <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> <span data-i18n-privacy="backToHome">Back to Home</span></a>
+
+    <!-- Key Highlight -->
+    <div class="privacy-highlight">
+      <i class="fa-solid fa-lock"></i>
+      <p data-i18n-privacy="highlight">DropLocal is 100% offline. Your files never leave your local network and are never uploaded to any server.</p>
+    </div>
+
+    <!-- Section 1: Overview -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon pink"><i class="fa-solid fa-eye"></i></div>
+        <h2 data-i18n-privacy="s1-title">Overview</h2>
+      </div>
+      <p data-i18n-privacy="s1-text">DropLocal is a file-sharing application that operates entirely on your local Wi-Fi network. It does not require an internet connection to function. All file transfers occur directly between your devices over your local network, ensuring that your data remains private and secure at all times.</p>
+    </div>
+
+    <!-- Section 2: Data Collection -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon blue"><i class="fa-solid fa-database"></i></div>
+        <h2 data-i18n-privacy="s2-title">Data We Collect</h2>
+      </div>
+      <p data-i18n-privacy="s2-intro">DropLocal collects minimal data, strictly limited to what is necessary for the app to function:</p>
+      <ul>
+        <li data-i18n-privacy="s2-item1"><strong>Language preference:</strong> Stored locally on your device to remember your chosen display language.</li>
+        <li data-i18n-privacy="s2-item2"><strong>Recent IP addresses:</strong> Stored locally on your device to facilitate reconnection with previously paired devices.</li>
+        <li data-i18n-privacy="s2-item3"><strong>Onboarding status:</strong> A local flag indicating whether you have completed the initial setup screens.</li>
+      </ul>
+      <p data-i18n-privacy="s2-outro" style="margin-top: 1rem;"><strong>We do not collect</strong> personal information, analytics, usage statistics, contact lists, or any data beyond what is listed above. All stored data remains exclusively on your device.</p>
+    </div>
+
+    <!-- Section 3: Camera -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon green"><i class="fa-solid fa-camera"></i></div>
+        <h2 data-i18n-privacy="s3-title">Camera Permission</h2>
+      </div>
+      <p data-i18n-privacy="s3-text">DropLocal requests camera access solely for scanning QR codes to quickly pair devices on the same network. The camera feed is processed in real time and is never recorded, stored, or transmitted. If your device does not have a camera (e.g., Smart TV, Steam Deck), you can enter the IP address manually instead.</p>
+    </div>
+
+    <!-- Section 4: Storage -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon peach"><i class="fa-solid fa-folder-open"></i></div>
+        <h2 data-i18n-privacy="s4-title">Storage Permission</h2>
+      </div>
+      <p data-i18n-privacy="s4-text">DropLocal requires access to your device's storage exclusively for reading files you choose to send and for saving files you receive. The app does not scan, index, or access any files beyond those you explicitly select for transfer.</p>
+    </div>
+
+    <!-- Section 5: Advertising -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon coral"><i class="fa-solid fa-rectangle-ad"></i></div>
+        <h2 data-i18n-privacy="s5-title">Advertising</h2>
+      </div>
+      <p data-i18n-privacy="s5-text1">DropLocal uses Google AdMob to display advertisements. AdMob is a third-party service provided by Google that may collect and use certain data, including:</p>
+      <ul>
+        <li data-i18n-privacy="s5-item1"><strong>Advertising identifier:</strong> A device-specific, user-resettable identifier used for personalized advertising.</li>
+        <li data-i18n-privacy="s5-item2"><strong>General device information:</strong> Device model, operating system version, and screen size for ad formatting.</li>
+        <li data-i18n-privacy="s5-item3"><strong>IP address:</strong> Used by Google to determine approximate location for regional ad targeting.</li>
+      </ul>
+      <p data-i18n-privacy="s5-text2" style="margin-top: 1rem;">This data is collected and processed by Google according to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. DropLocal itself does not access, store, or transmit any of this advertising data. You can opt out of personalized ads in your device's advertising settings.</p>
+    </div>
+
+    <!-- Section 6: Network -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon blue"><i class="fa-solid fa-wifi"></i></div>
+        <h2 data-i18n-privacy="s6-title">Network Permissions</h2>
+      </div>
+      <p data-i18n-privacy="s6-text">DropLocal uses network-related permissions (Wi-Fi state, network state) solely to establish local file transfers between devices on the same network. Internet permission is required for loading advertisements via AdMob. No user data is transmitted over the internet by DropLocal itself.</p>
+    </div>
+
+    <!-- Section 7: Third-Party Services -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon green"><i class="fa-solid fa-handshake"></i></div>
+        <h2 data-i18n-privacy="s7-title">Third-Party Services</h2>
+      </div>
+      <p data-i18n-privacy="s7-intro">DropLocal integrates the following third-party services:</p>
+      <ul>
+        <li data-i18n-privacy="s7-item1"><strong>Google AdMob:</strong> For displaying advertisements (see Advertising section above).</li>
+        <li data-i18n-privacy="s7-item2"><strong>Google Fonts:</strong> Font files are bundled with the app and do not trigger network requests at runtime.</li>
+      </ul>
+      <p data-i18n-privacy="s7-outro" style="margin-top: 1rem;">No other third-party analytics, tracking, or data-collection SDKs are used.</p>
+    </div>
+
+    <!-- Section 8: Children -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon pink"><i class="fa-solid fa-child"></i></div>
+        <h2 data-i18n-privacy="s8-title">Children's Privacy</h2>
+      </div>
+      <p data-i18n-privacy="s8-text">DropLocal does not knowingly collect personal data from children under 13. The app's sole purpose is local file transfer and does not include features designed to attract children, such as social networking, chat, or user accounts.</p>
+    </div>
+
+    <!-- Section 9: Changes -->
+    <div class="privacy-section">
+      <div class="section-header">
+        <div class="section-icon peach"><i class="fa-solid fa-pen-to-square"></i></div>
+        <h2 data-i18n-privacy="s9-title">Changes to This Policy</h2>
+      </div>
+      <p data-i18n-privacy="s9-text">We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date. We encourage you to review this page periodically.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-box">
+      <h3 data-i18n-privacy="contact-title">Questions or Concerns?</h3>
+      <p data-i18n-privacy="contact-text">If you have any questions about this Privacy Policy, please contact us at:</p>
+      <p style="margin-top: 0.75rem;"><a href="mailto:smofitech@gmail.com"><i class="fa-solid fa-envelope"></i> smofitech@gmail.com</a></p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer-area">
+    <div class="footer-bottom">
+      <div class="container bottom-container">
+        <p class="copyright">&copy; 2026 DropLocal. <span data-i18n-privacy="footer-rights">All rights reserved.</span></p>
+        <p class="badge-row">
+          <span class="footer-badge"><i class="fa-solid fa-shield-halved"></i> <span data-i18n-privacy="secureDataFooter">100% offline and secure</span></span>
+          <span class="footer-badge"><i class="fa-solid fa-wifi"></i> <span data-i18n-privacy="localWirelessFooter">Local wireless transfer</span></span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Privacy Policy translations
+    const privacyTranslations = {
+      en: {
+        "nav-features": "Features",
+        "nav-how": "How it Works",
+        "nav-download": "Download",
+        "title": "Privacy Policy",
+        "subtitle": "DropLocal is designed with your privacy at its core. Here is exactly how we handle your data.",
+        "lastUpdated": "Last updated: July 1, 2026",
+        "backToHome": "Back to Home",
+        "highlight": "DropLocal is 100% offline. Your files never leave your local network and are never uploaded to any server.",
+        "s1-title": "Overview",
+        "s1-text": "DropLocal is a file-sharing application that operates entirely on your local Wi-Fi network. It does not require an internet connection to function. All file transfers occur directly between your devices over your local network, ensuring that your data remains private and secure at all times.",
+        "s2-title": "Data We Collect",
+        "s2-intro": "DropLocal collects minimal data, strictly limited to what is necessary for the app to function:",
+        "s2-item1": "<strong>Language preference:</strong> Stored locally on your device to remember your chosen display language.",
+        "s2-item2": "<strong>Recent IP addresses:</strong> Stored locally on your device to facilitate reconnection with previously paired devices.",
+        "s2-item3": "<strong>Onboarding status:</strong> A local flag indicating whether you have completed the initial setup screens.",
+        "s2-outro": "<strong>We do not collect</strong> personal information, analytics, usage statistics, contact lists, or any data beyond what is listed above. All stored data remains exclusively on your device.",
+        "s3-title": "Camera Permission",
+        "s3-text": "DropLocal requests camera access solely for scanning QR codes to quickly pair devices on the same network. The camera feed is processed in real time and is never recorded, stored, or transmitted. If your device does not have a camera (e.g., Smart TV, Steam Deck), you can enter the IP address manually instead.",
+        "s4-title": "Storage Permission",
+        "s4-text": "DropLocal requires access to your device's storage exclusively for reading files you choose to send and for saving files you receive. The app does not scan, index, or access any files beyond those you explicitly select for transfer.",
+        "s5-title": "Advertising",
+        "s5-text1": "DropLocal uses Google AdMob to display advertisements. AdMob is a third-party service provided by Google that may collect and use certain data, including:",
+        "s5-item1": "<strong>Advertising identifier:</strong> A device-specific, user-resettable identifier used for personalized advertising.",
+        "s5-item2": "<strong>General device information:</strong> Device model, operating system version, and screen size for ad formatting.",
+        "s5-item3": "<strong>IP address:</strong> Used by Google to determine approximate location for regional ad targeting.",
+        "s5-text2": "This data is collected and processed by Google according to <a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>Google's Privacy Policy</a>. DropLocal itself does not access, store, or transmit any of this advertising data. You can opt out of personalized ads in your device's advertising settings.",
+        "s6-title": "Network Permissions",
+        "s6-text": "DropLocal uses network-related permissions (Wi-Fi state, network state) solely to establish local file transfers between devices on the same network. Internet permission is required for loading advertisements via AdMob. No user data is transmitted over the internet by DropLocal itself.",
+        "s7-title": "Third-Party Services",
+        "s7-intro": "DropLocal integrates the following third-party services:",
+        "s7-item1": "<strong>Google AdMob:</strong> For displaying advertisements (see Advertising section above).",
+        "s7-item2": "<strong>Google Fonts:</strong> Font files are bundled with the app and do not trigger network requests at runtime.",
+        "s7-outro": "No other third-party analytics, tracking, or data-collection SDKs are used.",
+        "s8-title": "Children's Privacy",
+        "s8-text": "DropLocal does not knowingly collect personal data from children under 13. The app's sole purpose is local file transfer and does not include features designed to attract children, such as social networking, chat, or user accounts.",
+        "s9-title": "Changes to This Policy",
+        "s9-text": "We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated revision date. We encourage you to review this page periodically.",
+        "contact-title": "Questions or Concerns?",
+        "contact-text": "If you have any questions about this Privacy Policy, please contact us at:",
+        "footer-rights": "All rights reserved.",
+        "secureDataFooter": "100% offline and secure",
+        "localWirelessFooter": "Local wireless transfer"
+      },
+      fr: {
+        "nav-features": "Fonctionnalités",
+        "nav-how": "Comment ça marche",
+        "nav-download": "Téléchargement",
+        "title": "Politique de Confidentialité",
+        "subtitle": "DropLocal est conçu avec votre vie privée au cœur de ses priorités. Voici exactement comment nous gérons vos données.",
+        "lastUpdated": "Dernière mise à jour : 1er juillet 2026",
+        "backToHome": "Retour à l'accueil",
+        "highlight": "DropLocal est 100% hors-ligne. Vos fichiers ne quittent jamais votre réseau local et ne sont jamais envoyés vers un serveur.",
+        "s1-title": "Aperçu",
+        "s1-text": "DropLocal est une application de partage de fichiers qui fonctionne entièrement sur votre réseau Wi-Fi local. Elle ne nécessite aucune connexion internet. Tous les transferts de fichiers s'effectuent directement entre vos appareils via votre réseau local, garantissant que vos données restent privées et sécurisées à tout moment.",
+        "s2-title": "Données collectées",
+        "s2-intro": "DropLocal collecte un minimum de données, strictement limitées à ce qui est nécessaire au fonctionnement de l'application :",
+        "s2-item1": "<strong>Préférence de langue :</strong> Stockée localement sur votre appareil pour mémoriser la langue d'affichage choisie.",
+        "s2-item2": "<strong>Adresses IP récentes :</strong> Stockées localement sur votre appareil pour faciliter la reconnexion avec les appareils précédemment appairés.",
+        "s2-item3": "<strong>Statut d'introduction :</strong> Un indicateur local indiquant si vous avez terminé les écrans de configuration initiale.",
+        "s2-outro": "<strong>Nous ne collectons pas</strong> d'informations personnelles, d'analyses, de statistiques d'utilisation, de listes de contacts, ni aucune donnée au-delà de ce qui est listé ci-dessus. Toutes les données stockées restent exclusivement sur votre appareil.",
+        "s3-title": "Permission Caméra",
+        "s3-text": "DropLocal demande l'accès à la caméra uniquement pour scanner les codes QR afin d'appairer rapidement les appareils sur le même réseau. Le flux de la caméra est traité en temps réel et n'est jamais enregistré, stocké ou transmis. Si votre appareil ne possède pas de caméra (ex : Smart TV, Steam Deck), vous pouvez saisir l'adresse IP manuellement.",
+        "s4-title": "Permission Stockage",
+        "s4-text": "DropLocal nécessite l'accès au stockage de votre appareil exclusivement pour lire les fichiers que vous choisissez d'envoyer et pour sauvegarder les fichiers que vous recevez. L'application ne scanne, n'indexe ni n'accède à aucun fichier au-delà de ceux que vous sélectionnez explicitement pour le transfert.",
+        "s5-title": "Publicité",
+        "s5-text1": "DropLocal utilise Google AdMob pour afficher des publicités. AdMob est un service tiers fourni par Google qui peut collecter et utiliser certaines données, notamment :",
+        "s5-item1": "<strong>Identifiant publicitaire :</strong> Un identifiant spécifique à l'appareil, réinitialisable par l'utilisateur, utilisé pour la publicité personnalisée.",
+        "s5-item2": "<strong>Informations générales sur l'appareil :</strong> Modèle de l'appareil, version du système d'exploitation et taille de l'écran pour le formatage des annonces.",
+        "s5-item3": "<strong>Adresse IP :</strong> Utilisée par Google pour déterminer la localisation approximative à des fins de ciblage publicitaire régional.",
+        "s5-text2": "Ces données sont collectées et traitées par Google conformément à la <a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>Politique de Confidentialité de Google</a>. DropLocal lui-même n'accède pas, ne stocke pas et ne transmet aucune de ces données publicitaires. Vous pouvez désactiver les annonces personnalisées dans les paramètres de publicité de votre appareil.",
+        "s6-title": "Permissions Réseau",
+        "s6-text": "DropLocal utilise les permissions liées au réseau (état Wi-Fi, état du réseau) uniquement pour établir des transferts de fichiers locaux entre les appareils du même réseau. La permission Internet est requise pour le chargement des publicités via AdMob. Aucune donnée utilisateur n'est transmise sur Internet par DropLocal lui-même.",
+        "s7-title": "Services Tiers",
+        "s7-intro": "DropLocal intègre les services tiers suivants :",
+        "s7-item1": "<strong>Google AdMob :</strong> Pour l'affichage des publicités (voir la section Publicité ci-dessus).",
+        "s7-item2": "<strong>Google Fonts :</strong> Les fichiers de polices sont intégrés dans l'application et ne déclenchent pas de requêtes réseau à l'exécution.",
+        "s7-outro": "Aucun autre SDK d'analyse, de suivi ou de collecte de données tiers n'est utilisé.",
+        "s8-title": "Confidentialité des Enfants",
+        "s8-text": "DropLocal ne collecte pas sciemment de données personnelles d'enfants de moins de 13 ans. L'unique objectif de l'application est le transfert de fichiers local et elle n'inclut pas de fonctionnalités destinées à attirer les enfants, telles que les réseaux sociaux, le chat ou les comptes utilisateur.",
+        "s9-title": "Modifications de cette Politique",
+        "s9-text": "Nous pouvons mettre à jour cette Politique de Confidentialité de temps en temps. Tout changement sera reflété sur cette page avec une date de révision mise à jour. Nous vous encourageons à consulter cette page périodiquement.",
+        "contact-title": "Questions ou Préoccupations ?",
+        "contact-text": "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à :",
+        "footer-rights": "Tous droits réservés.",
+        "secureDataFooter": "100% hors-ligne et sécurisé",
+        "localWirelessFooter": "Transfert local sans fil"
+      },
+      es: {
+        "nav-features": "Funcionalidades",
+        "nav-how": "Cómo funciona",
+        "nav-download": "Descargar",
+        "title": "Política de Privacidad",
+        "subtitle": "DropLocal está diseñado con tu privacidad como prioridad. Aquí te explicamos exactamente cómo manejamos tus datos.",
+        "lastUpdated": "Última actualización: 1 de julio de 2026",
+        "backToHome": "Volver al inicio",
+        "highlight": "DropLocal es 100% sin conexión. Tus archivos nunca salen de tu red local y nunca se suben a ningún servidor.",
+        "s1-title": "Descripción General",
+        "s1-text": "DropLocal es una aplicación para compartir archivos que funciona completamente en tu red Wi-Fi local. No requiere conexión a internet. Todas las transferencias de archivos se realizan directamente entre tus dispositivos a través de tu red local, asegurando que tus datos permanezcan privados y seguros en todo momento.",
+        "s2-title": "Datos que Recopilamos",
+        "s2-intro": "DropLocal recopila una cantidad mínima de datos, estrictamente limitados a lo necesario para que la aplicación funcione:",
+        "s2-item1": "<strong>Preferencia de idioma:</strong> Almacenada localmente en tu dispositivo para recordar el idioma de visualización elegido.",
+        "s2-item2": "<strong>Direcciones IP recientes:</strong> Almacenadas localmente en tu dispositivo para facilitar la reconexión con dispositivos emparejados anteriormente.",
+        "s2-item3": "<strong>Estado de introducción:</strong> Un indicador local que señala si has completado las pantallas de configuración inicial.",
+        "s2-outro": "<strong>No recopilamos</strong> información personal, análisis, estadísticas de uso, listas de contactos ni ningún dato más allá de lo indicado anteriormente. Todos los datos almacenados permanecen exclusivamente en tu dispositivo.",
+        "s3-title": "Permiso de Cámara",
+        "s3-text": "DropLocal solicita acceso a la cámara únicamente para escanear códigos QR y emparejar rápidamente los dispositivos en la misma red. La imagen de la cámara se procesa en tiempo real y nunca se graba, almacena ni transmite. Si tu dispositivo no tiene cámara (ej: Smart TV, Steam Deck), puedes introducir la dirección IP manualmente.",
+        "s4-title": "Permiso de Almacenamiento",
+        "s4-text": "DropLocal requiere acceso al almacenamiento de tu dispositivo exclusivamente para leer los archivos que elijas enviar y para guardar los archivos que recibas. La aplicación no escanea, indexa ni accede a ningún archivo más allá de los que selecciones explícitamente para la transferencia.",
+        "s5-title": "Publicidad",
+        "s5-text1": "DropLocal utiliza Google AdMob para mostrar anuncios. AdMob es un servicio de terceros proporcionado por Google que puede recopilar y usar ciertos datos, incluyendo:",
+        "s5-item1": "<strong>Identificador publicitario:</strong> Un identificador específico del dispositivo, restablecible por el usuario, utilizado para publicidad personalizada.",
+        "s5-item2": "<strong>Información general del dispositivo:</strong> Modelo del dispositivo, versión del sistema operativo y tamaño de pantalla para el formato de los anuncios.",
+        "s5-item3": "<strong>Dirección IP:</strong> Utilizada por Google para determinar la ubicación aproximada para la segmentación publicitaria regional.",
+        "s5-text2": "Estos datos son recopilados y procesados por Google según la <a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>Política de Privacidad de Google</a>. DropLocal en sí no accede, almacena ni transmite ninguno de estos datos publicitarios. Puedes desactivar los anuncios personalizados en la configuración de publicidad de tu dispositivo.",
+        "s6-title": "Permisos de Red",
+        "s6-text": "DropLocal utiliza los permisos relacionados con la red (estado Wi-Fi, estado de red) únicamente para establecer transferencias de archivos locales entre dispositivos de la misma red. El permiso de Internet es necesario para cargar los anuncios a través de AdMob. DropLocal en sí no transmite datos del usuario por Internet.",
+        "s7-title": "Servicios de Terceros",
+        "s7-intro": "DropLocal integra los siguientes servicios de terceros:",
+        "s7-item1": "<strong>Google AdMob:</strong> Para mostrar anuncios (ver sección de Publicidad arriba).",
+        "s7-item2": "<strong>Google Fonts:</strong> Los archivos de fuentes están incluidos en la aplicación y no generan solicitudes de red en tiempo de ejecución.",
+        "s7-outro": "No se utilizan otros SDK de análisis, seguimiento o recopilación de datos de terceros.",
+        "s8-title": "Privacidad de los Niños",
+        "s8-text": "DropLocal no recopila conscientemente datos personales de niños menores de 13 años. El único propósito de la aplicación es la transferencia de archivos local y no incluye funciones diseñadas para atraer a los niños, como redes sociales, chat o cuentas de usuario.",
+        "s9-title": "Cambios en esta Política",
+        "s9-text": "Podemos actualizar esta Política de Privacidad de vez en cuando. Cualquier cambio se reflejará en esta página con una fecha de revisión actualizada. Te animamos a revisar esta página periódicamente.",
+        "contact-title": "¿Preguntas o Inquietudes?",
+        "contact-text": "Si tienes alguna pregunta sobre esta Política de Privacidad, contáctanos en:",
+        "footer-rights": "Todos los derechos reservados.",
+        "secureDataFooter": "100% sin conexión y seguro",
+        "localWirelessFooter": "Transferencia local inalámbrica"
+      },
+      ar: {
+        "nav-features": "المميزات",
+        "nav-how": "كيف يعمل",
+        "nav-download": "تنزيل",
+        "title": "سياسة الخصوصية",
+        "subtitle": "تم تصميم DropLocal مع وضع خصوصيتك في صميم أولوياته. إليك بالضبط كيف نتعامل مع بياناتك.",
+        "lastUpdated": "آخر تحديث: 1 يوليو 2026",
+        "backToHome": "العودة إلى الصفحة الرئيسية",
+        "highlight": "DropLocal يعمل بالكامل بدون إنترنت. ملفاتك لا تغادر شبكتك المحلية أبداً ولا يتم رفعها إلى أي خادم.",
+        "s1-title": "نظرة عامة",
+        "s1-text": "DropLocal هو تطبيق لمشاركة الملفات يعمل بالكامل على شبكة Wi-Fi المحلية الخاصة بك. لا يتطلب اتصالاً بالإنترنت للعمل. تتم جميع عمليات نقل الملفات مباشرة بين أجهزتك عبر شبكتك المحلية، مما يضمن بقاء بياناتك خاصة وآمنة في جميع الأوقات.",
+        "s2-title": "البيانات التي نجمعها",
+        "s2-intro": "يجمع DropLocal الحد الأدنى من البيانات، محدودة بشكل صارم بما هو ضروري لعمل التطبيق:",
+        "s2-item1": "<strong>تفضيل اللغة:</strong> مخزن محلياً على جهازك لتذكر لغة العرض المختارة.",
+        "s2-item2": "<strong>عناوين IP الحديثة:</strong> مخزنة محلياً على جهازك لتسهيل إعادة الاتصال بالأجهزة التي تم إقرانها مسبقاً.",
+        "s2-item3": "<strong>حالة التعريف:</strong> مؤشر محلي يوضح ما إذا كنت قد أكملت شاشات الإعداد الأولية.",
+        "s2-outro": "<strong>نحن لا نجمع</strong> معلومات شخصية أو تحليلات أو إحصائيات استخدام أو قوائم جهات اتصال أو أي بيانات تتجاوز ما هو مدرج أعلاه. تبقى جميع البيانات المخزنة حصرياً على جهازك.",
+        "s3-title": "إذن الكاميرا",
+        "s3-text": "يطلب DropLocal الوصول إلى الكاميرا فقط لمسح رموز QR لإقران الأجهزة بسرعة على نفس الشبكة. تتم معالجة تغذية الكاميرا في الوقت الفعلي ولا يتم تسجيلها أو تخزينها أو نقلها أبداً. إذا كان جهازك لا يحتوي على كاميرا (مثل: Smart TV، Steam Deck)، يمكنك إدخال عنوان IP يدوياً بدلاً من ذلك.",
+        "s4-title": "إذن التخزين",
+        "s4-text": "يتطلب DropLocal الوصول إلى تخزين جهازك حصرياً لقراءة الملفات التي تختار إرسالها ولحفظ الملفات التي تستقبلها. لا يقوم التطبيق بمسح أو فهرسة أو الوصول إلى أي ملفات تتجاوز تلك التي تحددها صراحة للنقل.",
+        "s5-title": "الإعلانات",
+        "s5-text1": "يستخدم DropLocal خدمة Google AdMob لعرض الإعلانات. AdMob هي خدمة طرف ثالث مقدمة من Google قد تجمع وتستخدم بيانات معينة، بما في ذلك:",
+        "s5-item1": "<strong>معرّف الإعلانات:</strong> معرّف خاص بالجهاز قابل لإعادة التعيين من قبل المستخدم يُستخدم للإعلانات المخصصة.",
+        "s5-item2": "<strong>معلومات عامة عن الجهاز:</strong> طراز الجهاز وإصدار نظام التشغيل وحجم الشاشة لتنسيق الإعلانات.",
+        "s5-item3": "<strong>عنوان IP:</strong> يستخدمه Google لتحديد الموقع التقريبي لاستهداف الإعلانات الإقليمية.",
+        "s5-text2": "يتم جمع هذه البيانات ومعالجتها بواسطة Google وفقاً لـ <a href='https://policies.google.com/privacy' target='_blank' rel='noopener'>سياسة خصوصية Google</a>. لا يقوم DropLocal نفسه بالوصول إلى أي من هذه البيانات الإعلانية أو تخزينها أو نقلها. يمكنك إلغاء الاشتراك في الإعلانات المخصصة في إعدادات الإعلانات بجهازك.",
+        "s6-title": "أذونات الشبكة",
+        "s6-text": "يستخدم DropLocal الأذونات المتعلقة بالشبكة (حالة Wi-Fi، حالة الشبكة) فقط لإنشاء عمليات نقل ملفات محلية بين الأجهزة على نفس الشبكة. إذن الإنترنت مطلوب لتحميل الإعلانات عبر AdMob. لا يتم نقل أي بيانات مستخدم عبر الإنترنت بواسطة DropLocal نفسه.",
+        "s7-title": "خدمات الطرف الثالث",
+        "s7-intro": "يدمج DropLocal خدمات الطرف الثالث التالية:",
+        "s7-item1": "<strong>Google AdMob:</strong> لعرض الإعلانات (انظر قسم الإعلانات أعلاه).",
+        "s7-item2": "<strong>Google Fonts:</strong> ملفات الخطوط مضمنة في التطبيق ولا تُطلق طلبات شبكة أثناء التشغيل.",
+        "s7-outro": "لا يتم استخدام أي حزم SDK أخرى للتحليلات أو التتبع أو جمع البيانات من أطراف ثالثة.",
+        "s8-title": "خصوصية الأطفال",
+        "s8-text": "لا يقوم DropLocal عن عمد بجمع بيانات شخصية من الأطفال دون سن 13 عاماً. الغرض الوحيد للتطبيق هو نقل الملفات محلياً ولا يتضمن ميزات مصممة لجذب الأطفال مثل الشبكات الاجتماعية أو الدردشة أو حسابات المستخدمين.",
+        "s9-title": "التغييرات على هذه السياسة",
+        "s9-text": "قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. ستنعكس أي تغييرات على هذه الصفحة مع تاريخ مراجعة محدث. نشجعك على مراجعة هذه الصفحة بشكل دوري.",
+        "contact-title": "أسئلة أو استفسارات؟",
+        "contact-text": "إذا كانت لديك أي أسئلة حول سياسة الخصوصية هذه، يرجى الاتصال بنا على:",
+        "footer-rights": "جميع الحقوق محفوظة.",
+        "secureDataFooter": "آمن 100% وبدون إنترنت",
+        "localWirelessFooter": "نقل لاسلكي محلي"
+      }
+    };
+
+    // Get lang from URL or default to 'en'
+    function getLang() {
+      const params = new URLSearchParams(window.location.search);
+      return params.get('lang') || 'en';
+    }
+
+    function setLang(lang) {
+      // Update URL
+      const url = new URL(window.location);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
+
+      // Set RTL for Arabic
+      if (lang === 'ar') {
+        document.documentElement.setAttribute('dir', 'rtl');
+        document.documentElement.setAttribute('lang', 'ar');
+      } else {
+        document.documentElement.setAttribute('dir', 'ltr');
+        document.documentElement.setAttribute('lang', lang);
+      }
+
+      // Apply translations
+      const t = privacyTranslations[lang] || privacyTranslations['en'];
+      document.querySelectorAll('[data-i18n-privacy]').forEach(el => {
+        const key = el.getAttribute('data-i18n-privacy');
+        if (t[key]) {
+          el.innerHTML = t[key];
+        }
+      });
+
+      // Update active button
+      document.querySelectorAll('.privacy-lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      // Update nav links with lang param
+      document.querySelectorAll('.desktop-menu a, .logo-link').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('index.html')) {
+          const base = href.split('?')[0].split('#');
+          const hash = base[1] ? '#' + base[1] : '';
+          link.setAttribute('href', base[0] + '?lang=' + lang + hash);
+        }
+      });
+
+      // Update back link
+      const backLink = document.querySelector('.back-link');
+      if (backLink) {
+        backLink.setAttribute('href', 'index.html?lang=' + lang);
+      }
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = getLang();
+      setLang(lang);
+
+      // Language switcher buttons
+      document.querySelectorAll('.privacy-lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setLang(btn.getAttribute('data-lang'));
+        });
+      });
+    });
+  </script>
+</body>
+</html>
