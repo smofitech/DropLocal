@@ -1,0 +1,3 @@
+# Ignorer les gros fichiers binaires de téléchargement
+downloads/*.zip
+downloads/*.apk

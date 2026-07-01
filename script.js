@@ -61,7 +61,7 @@ const translations = {
     "stayOnScreen": "Keep this screen open to receive.",
     "download-title": "Download DropLocal",
     "download-subtitle": "Available on all your devices. Install DropLocal today and experience frictionless sharing.",
-    "dl-btn-win": "Download .exe",
+    "dl-btn-win": "Download .zip",
     "dl-btn-mac": "Download .dmg",
     "dl-btn-deck": "Install via Discover",
     "dl-btn-tv": "Download TV APK",
@@ -139,7 +139,7 @@ const translations = {
     "stayOnScreen": "Gardez cet écran ouvert pour recevoir.",
     "download-title": "Télécharger DropLocal",
     "download-subtitle": "Disponible sur tous vos appareils. Installez DropLocal aujourd'hui pour un partage sans friction.",
-    "dl-btn-win": "Télécharger .exe",
+    "dl-btn-win": "Télécharger .zip",
     "dl-btn-mac": "Télécharger .dmg",
     "dl-btn-deck": "Installer via Discover",
     "dl-btn-tv": "Télécharger l'APK TV",
@@ -217,7 +217,7 @@ const translations = {
     "stayOnScreen": "Mantén esta pantalla abierta para recibir.",
     "download-title": "Descargar DropLocal",
     "download-subtitle": "Disponible en todos tus dispositivos. Instala DropLocal hoy y experimenta un intercambio sin fricciones.",
-    "dl-btn-win": "Descargar .exe",
+    "dl-btn-win": "Descargar .zip",
     "dl-btn-mac": "Descargar .dmg",
     "dl-btn-deck": "Instalar vía Discover",
     "dl-btn-tv": "Descargar APK para TV",
@@ -295,7 +295,7 @@ const translations = {
     "stayOnScreen": "أبقِ هذه الشاشة مفتوحة للاستلام.",
     "download-title": "تنزيل DropLocal",
     "download-subtitle": "متوفر على جميع أجهزتك. قم بتثبيت DropLocal اليوم واستمتع بمشاركة خالية من المتاعب.",
-    "dl-btn-win": "تنزيل exe.",
+    "dl-btn-win": "تنزيل .zip",
     "dl-btn-mac": "تنزيل dmg.",
     "dl-btn-deck": "تثبيت عبر Discover",
     "dl-btn-tv": "تنزيل APK للتلفزيون",
@@ -439,17 +439,17 @@ function detectOS() {
   // Detect OS pattern
   if (/windows/i.test(userAgent)) {
     os = 'Windows';
-    downloadLink = 'downloads/DropLocal_Setup.exe';
+    downloadLink = 'downloads/DropLocal_Windows.zip';
     iconClass = 'fa-brands fa-windows';
     cardId = 'card-windows';
   } else if (/macintosh|mac os x/i.test(userAgent)) {
     os = 'macOS';
-    downloadLink = 'downloads/DropLocal.dmg';
+    downloadLink = 'downloads/DropLocal_MacOS.zip';
     iconClass = 'fa-brands fa-apple';
     cardId = 'card-macos';
   } else if (/linux/i.test(userAgent)) {
     os = 'Linux';
-    downloadLink = 'downloads/droplocal.deb';
+    downloadLink = 'downloads/DropLocal_Linux.zip';
     iconClass = 'fa-brands fa-linux';
     cardId = 'card-linux';
     
@@ -462,7 +462,7 @@ function detectOS() {
     }
   } else if (/android/i.test(userAgent)) {
     os = 'Android';
-    downloadLink = 'downloads/droplocal.apk';
+    downloadLink = 'https://play.google.com/store/apps/details?id=io.github.droplocal';
     iconClass = 'fa-brands fa-android';
     cardId = 'card-android';
   } else if (/iphone|ipad|ipod/i.test(userAgent)) {

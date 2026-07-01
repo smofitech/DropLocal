@@ -330,24 +330,29 @@
           <div class="platform-card" id="card-macos">
             <div class="platform-icon"><i class="fa-brands fa-apple"></i></div>
             <h3>macOS</h3>
-            <p class="platform-format">.dmg Disk Image</p>
+            <p class="platform-format">.dmg Installer / .zip Archive</p>
             <p class="platform-req">Intel & Apple Silicon (macOS 11+)</p>
-            <a href="downloads/DropLocal.dmg" class="btn btn-primary btn-download" download="DropLocal.dmg">
-              <i class="fa-solid fa-arrow-down-to-bracket"></i>
-              <span data-i18n="dl-btn-mac">Download .dmg</span>
-            </a>
+            <div class="multi-btn-row">
+              <a href="downloads/DropLocal.dmg" class="btn btn-outlined btn-sm" download="DropLocal.dmg">DMG</a>
+              <a href="downloads/DropLocal_MacOS.zip" class="btn btn-primary btn-sm" download="DropLocal_MacOS.zip">
+                <i class="fa-regular fa-file-zipper"></i> ZIP
+              </a>
+            </div>
           </div>
 
           <!-- Linux Card -->
           <div class="platform-card" id="card-linux">
             <div class="platform-icon"><i class="fa-brands fa-linux"></i></div>
             <h3>Linux</h3>
-            <p class="platform-format">.deb / .rpm / Flatpak</p>
+            <p class="platform-format">.deb / .rpm / .zip / Flatpak</p>
             <p class="platform-req">Ubuntu, Fedora, Arch & SteamOS</p>
-            <div class="multi-btn-row">
-              <a href="downloads/droplocal.deb" class="btn btn-outlined btn-sm" download="droplocal.deb">DEB</a>
-              <a href="downloads/droplocal.rpm" class="btn btn-outlined btn-sm" download="droplocal.rpm">RPM</a>
-              <a href="https://flathub.org/apps/details/io.github.droplocal" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Flatpak</a>
+            <div class="multi-btn-row" style="flex-wrap: wrap;">
+              <a href="downloads/droplocal.deb" class="btn btn-outlined btn-sm" download="droplocal.deb" style="flex: 1 1 45%;">DEB</a>
+              <a href="downloads/droplocal.rpm" class="btn btn-outlined btn-sm" download="droplocal.rpm" style="flex: 1 1 45%;">RPM</a>
+              <a href="downloads/DropLocal_Linux.zip" class="btn btn-primary btn-sm" download="DropLocal_Linux.zip" style="flex: 1 1 45%;">
+                <i class="fa-regular fa-file-zipper"></i> ZIP
+              </a>
+              <a href="https://flathub.org/apps/details/io.github.droplocal" class="btn btn-outlined btn-sm" target="_blank" rel="noopener" style="flex: 1 1 45%;">Flatpak</a>
             </div>
           </div>
 
@@ -355,12 +360,12 @@
           <div class="platform-card" id="card-android">
             <div class="platform-icon"><i class="fa-brands fa-android"></i></div>
             <h3>Android</h3>
-            <p class="platform-format">Google Play / Standalone .apk</p>
+            <p class="platform-format">Google Play Store</p>
             <p class="platform-req">Android 6.0 (Marshmallow) or higher</p>
-            <div class="multi-btn-row">
-              <a href="downloads/droplocal.apk" class="btn btn-outlined btn-sm" download>Direct APK</a>
-              <a href="https://play.google.com/store/apps/details?id=io.github.droplocal" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Google Play</a>
-            </div>
+            <a href="https://play.google.com/store/apps/details?id=io.github.droplocal" class="btn btn-primary btn-download" target="_blank" rel="noopener">
+              <i class="fa-brands fa-google-play"></i>
+              <span>Google Play</span>
+            </a>
           </div>
 
           <!-- Steam Deck Card -->
